@@ -11,12 +11,12 @@
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="180dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -61,7 +61,7 @@
                 android:layout_marginRight="@dimen/detail_inner_horiz_margin"
                 android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier"
                 android:paddingBottom="@dimen/detail_body_bottom_margin"
-                android:textColor="@color/theme_accent"
+                android:textColor="@color/primary_dark"
                 android:textSize="@dimen/detail_body_text_size" />
 
         </LinearLayout>
@@ -72,14 +72,12 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:elevation="4dp"
-        android:fitsSystemWindows="true"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             >
@@ -88,7 +86,7 @@
                     android:id="@+id/photo"
                     android:layout_width="match_parent"
                     android:layout_height="180dp"
-                    android:scaleType="fitCenter" />
+                    android:scaleType="centerCrop" />
 
                 <View
                     android:layout_width="match_parent"
